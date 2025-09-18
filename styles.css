@@ -1,11 +1,12 @@
 *{
     box-sizing: border-box;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Bicolage Grotesque ;
+    
 }
 
 nav {
  width: 100%;
- border: solid 1px red;
+ border: solid 1px goldenrod;
 
 }
 
@@ -15,10 +16,27 @@ nav ul li {
 
 }
 
-img {
 
-    border: salmon;
+nav ul li:not(:first-child){
+ 
+    margin: 10px;
+
 }
+
+header h1 {
+
+    text-align: center;
+    font-size: 3rem;
+}
+
+.blue {
+
+    color: goldenrod;
+}
+
+
+
+
 
 
 
