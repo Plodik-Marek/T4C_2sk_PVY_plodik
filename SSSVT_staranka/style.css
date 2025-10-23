@@ -1,0 +1,147 @@
+/* Reset and base styles (replace global centering) */
+* { box-sizing: border-box; }
+html, body { 
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif; 
+  background: linear-gradient(135deg, #eaf6ff 0%, #dbeafe 100%);
+  min-height: 100vh;
+  color: #222;
+}
+
+/* Navbar / header */
+.menu{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: #0056b3; /* tmavě modrá */
+   width: 100%;
+   padding: 12px 24px;
+   height: auto;
+   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+   border-radius: 0 0 16px 16px;
+   margin-bottom: 32px;
+}
+
+/* Logo / levá část - upraveno pro reálné logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo img {
+  max-height: 64px;
+  width: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+}
+
+/* Horní blok (pokud ho stále používáte) */
+.upper div:first-child{
+   width: auto;
+   height: auto;
+   border: none;
+   display: flex;
+   flex-direction: column;
+}
+
+.upper div:first-child span{
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Navigační položky - horizontální menu */
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-items a {
+  color: #fff; /* bílý text */
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05em;
+  letter-spacing: 0.5px;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  position: relative;
+}
+
+.menu-items a:hover,
+.menu-items a:focus {
+  background-color: #003a7a;
+  color: #ffd700; /* žlutý text na hover pro kontrast */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Obsah stránky */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 32px 24px;
+  margin-bottom: 32px;
+}
+
+h1, h2, h3 {
+  color: #0056b3;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 1.08em;
+}
+
+button, .btn {
+  background: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+  transition: background 0.18s, color 0.18s;
+}
+button:hover, .btn:hover {
+  background: #003a7a;
+  color: #ffd700;
+}
+
+/* Responsivita */
+@media (max-width: 900px) {
+  .main-content {
+    padding: 18px 8px;
+  }
+}
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    border-radius: 0 0 12px 12px;
+  }
+  .menu-items {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .logo img { max-height: 48px; }
+  .main-content { padding: 12px 2px; }
+}

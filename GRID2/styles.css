@@ -1,0 +1,40 @@
+.grid-container{
+
+ 
+  grid-template-columns: 1.5fr 0.8fr 0.2fr 1fr;
+  grid-template-rows: 1fr   1fr 1.5fr;
+  display: grid;
+  gap: 20px;
+    
+  grid-template-areas: 
+  "rewards rewards manage manage"             
+  "rewards manage manage manage"
+  "strategy strategy apply apply";
+   
+}
+
+.grid-item{
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.rewards{
+  grid-area: rewards;
+}       
+
+.manage{
+  grid-area: manage;
+}       
+
+
+
+.strategy{
+  grid-area: strategy;
+}
+    
+
+
+
+

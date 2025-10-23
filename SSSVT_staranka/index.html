@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSSVT - Soukromá střední škola výpočetní techniky</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%); }
+    .menu { background: transparent; box-shadow: none; border-radius: 0; margin-bottom: 0; }
+    .sssvt-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 32px 0 32px; color: #fff;
+    }
+    .sssvt-logo { display: flex; align-items: center; gap: 18px; }
+    .sssvt-logo img { max-height: 54px; }
+    .sssvt-title { font-size: 2.1em; font-weight: 700; line-height: 1.1; }
+    .sssvt-slogan { font-size: 1em; letter-spacing: 2px; margin-top: 2px; }
+    .login-box {
+      background: rgba(255,255,255,0.10); border-radius: 8px; padding: 12px 18px; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; min-width: 220px;
+    }
+    .login-box input { border: none; border-radius: 4px; padding: 6px 10px; margin-bottom: 4px; }
+    .login-box label { color: #fff; font-size: 0.95em; }
+    .login-box .login-btn { background: #ffd700; color: #0056b3; font-weight: 700; border: none; border-radius: 4px; padding: 6px 16px; cursor: pointer; margin-left: 8px; }
+    .login-box .login-btn:hover { background: #fff200; }
+    .login-box .login-links { display: flex; gap: 12px; font-size: 0.95em; color: #fff; margin-top: 2px; }
+    .login-box .login-links label { margin-right: 6px; }
+    .pin-btn { background: #ffd700; border-radius: 6px; padding: 6px; border: none; position: absolute; right: 18px; top: 18px; cursor: pointer; }
+    .menu-bar {
+      background: #2386d9; display: flex; align-items: center; padding: 0 32px; height: 48px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .menu-items { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
+    .menu-items li a {
+      color: #fff; text-decoration: none; font-weight: 600; font-size: 1.08em; padding: 0 4px; transition: color 0.18s;
+    }
+    .menu-items li.active a { color: #ffd700; }
+    .search-box { margin-left: auto; display: flex; align-items: center; }
+    .search-box input {
+      border: none; border-radius: 4px; padding: 7px 14px; font-size: 1em; background: #e3eaf2; color: #222; margin-right: 0;
+    }
+    .search-box label { color: #fff; margin-right: 8px; }
+    @media (max-width: 900px) {
+      .sssvt-header, .menu-bar { flex-direction: column; align-items: stretch; padding: 12px 8px; }
+      .search-box { margin: 12px 0 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <button class="pin-btn" title="Připnout"><b>📌</b></button>
+  <header>
+    <div class="sssvt-header">
+      <div class="sssvt-logo">
+        <img src="assets/logo.png" alt="SSSVT logo">
+        <div>
+          <div class="sssvt-title">SOUKROMÁ STŘEDNÍ ŠKOLA<br>VÝPOČETNÍ TECHNIKY</div>
+          <div class="sssvt-slogan">PROSTĚ NĚCO NAVÍC...</div>
+        </div>
+      </div>
+      <div class="login-box">
+        <label for="user">- Uživatel -</label>
+        <input type="text" id="user" placeholder="Uživatel">
+        <label for="pass">- Heslo -</label>
+        <input type="password" id="pass" placeholder="Heslo">
+        <button class="login-btn">Přihlásit</button>
+        <div class="login-links">
+          <label><input type="radio" name="role" checked> Student/Učitel</label>
+          <label><input type="radio" name="role"> Webmail</label>
+          <label><input type="radio" name="role"> Rodič</label>
+        </div>
+      </div>
+    </div>
+    <nav class="menu-bar">
+      <ul class="menu-items">
+        <li class="active"><a href="#">ÚVOD</a></li>
+        <li><a href="#">INFORMACE O ŠKOLE</a></li>
+        <li><a href="#">PRO UCHAZEČE</a></li>
+        <li><a href="#">PRO STUDENTY</a></li>
+        <li><a href="#">KONTAKTY</a></li>
+      </ul>
+      <div class="search-box">
+        <label for="search">🔍</label>
+        <input type="text" id="search" placeholder="Hledat">
+      </div>
+    </nav>
+  </header>
+  <main class="main-content">
+    <h1>Vítejte na SSSVT</h1>
+    <p>Toto je ukázková stránka podle vzoru SSSVT. Využijte navigaci, přihlášení a vyhledávání stejně jako na originálním webu.</p>
+  </main>
+</body>
+</html>
